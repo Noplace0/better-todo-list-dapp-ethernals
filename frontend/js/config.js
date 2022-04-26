@@ -1,4 +1,4 @@
-let contractABI = [
+let contractABI =[
 	{
 		"inputs": [
 			{
@@ -54,6 +54,24 @@ let contractABI = [
 			},
 			{
 				"internalType": "bool",
+				"name": "_hightlight",
+				"type": "bool"
+			}
+		],
+		"name": "updateTaskHightlight",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_taskIndex",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
 				"name": "_status",
 				"type": "bool"
 			}
@@ -84,6 +102,16 @@ let contractABI = [
 						"internalType": "bool",
 						"name": "is_done",
 						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "highlighted",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "created_time",
+						"type": "uint256"
 					}
 				],
 				"internalType": "struct Todolist.Task",
@@ -127,4 +155,4 @@ let contractABI = [
 		"type": "function"
 	}
 ];
-let contractAddress = "0x314E5da57D74fB3351F94c6F203552c18E31BF86";
+let contractAddress = "0xaC19C2DBbA6f1c4B91277117340Db184af2a1b80";
