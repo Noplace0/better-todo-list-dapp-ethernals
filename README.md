@@ -19,6 +19,12 @@ This dapp help organise our daily tasks in a more secure way by using blockchain
 
 ## Project details:
 
+Folder: Contracts/Todolist.sol (deploy this in remix IDE)
+        FrontEnd/index.html(The main page of the website)
+        FrontEnd/js/app.js(Javascript handle between HTML and blockchain)
+        FrontEnd/js/config.js(smartcontract config: ABI, address)
+        FrontEnd/js/getAccount.js(Local blockchain endpoint and default wallet)
+
 Technologies used: Solidity , JavaScript , CSS3 , HTML5 
 Required Technologies: Ganache CLI , Remix IDE 
 
