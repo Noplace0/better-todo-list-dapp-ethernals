@@ -7,13 +7,17 @@ contract Todolist{
     struct Task{
         string task_name;
         bool is_done;
+        bool highlighted;
+        uint created_time;
     }
     
     mapping (address =>Task[]) private Users;
     function addTask (string calldata _task) external{
         Users[msg.sender].push(Task({
             task_name: _task,
-            is_done: false
+            is_done: false,
+            highlighted: false,
+            created_time: block.timestamp
         }));
     }
 
@@ -27,6 +31,11 @@ contract Todolist{
     function updateTaskStatus (uint _taskIndex, bool _status) external {
         Users[msg.sender][_taskIndex].is_done = _status;
     }
+
+    function updateTaskHightlight (uint _taskIndex, bool _hightlight) external {
+        Users[msg.sender][_taskIndex].highlighted = _hightlight;
+    }
+
     function updateallTaskStatus (bool _status) external {
         uint totaltask = Users[msg.sender].length;
         for(uint i = 0; i < totaltask; i++){
@@ -37,8 +46,9 @@ contract Todolist{
     function deleteTask (uint _taskIndex) external {
         delete Users[msg.sender][_taskIndex];
     }
+
     function deleteallTask () external {
-    delete Users[msg.sender];
+        delete Users[msg.sender];
     }
 
 

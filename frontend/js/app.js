@@ -224,7 +224,7 @@ function addTaskToList(id, name, status, highlighted, created_time) {
 	};
 }
 
-// Update task status doone count in the HTML (no web3 functions)
+// Update task status doone count in the HTML ( web3 functions)
 function updateTasksStatusCount() {
 	let list = document.getElementById("list");
 	let taskCount = list.childElementCount;
@@ -237,13 +237,7 @@ function updateTasksStatusCount() {
 	let count = document.getElementById("taskdoneCount");
 	count.innerText = "Finished: " + taskdoneCount + "/" + taskCount + " Task😎";
 }
-/*
-	var elms = document.querySelectorAll('li[id^=item-]');
-	for(let i=0; i<elms.length; i++)
-	{
-	console.log(elms[i].id)
-	}
-*/
+
 async function changeallTaskStatus() {
 	try {
 
